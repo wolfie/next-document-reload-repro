@@ -1,0 +1,14 @@
+{
+  "name": "next-document-reload-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --webpack -p 3100",
+    "repro": "node repro.mjs"
+  },
+  "dependencies": {
+    "next": "16.5.0-canary.54",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  }
+}

@@ -1,0 +1,17 @@
+minimumReleaseAgeExclude:
+  - '@next/env@16.5.0-canary.54'
+  - '@next/swc-darwin-arm64@16.5.0-canary.54'
+  - '@next/swc-darwin-x64@16.5.0-canary.54'
+  - '@next/swc-linux-arm64-gnu@16.5.0-canary.54'
+  - '@next/swc-linux-arm64-musl@16.5.0-canary.54'
+  - '@next/swc-linux-x64-gnu@16.5.0-canary.54'
+  - '@next/swc-linux-x64-musl@16.5.0-canary.54'
+  - '@next/swc-win32-arm64-msvc@16.5.0-canary.54'
+  - '@next/swc-win32-x64-msvc@16.5.0-canary.54'
+  - next@16.5.0-canary.54
+# Makes @opentelemetry/api resolvable from next, but not from the project root
+# (as happens when it only arrives transitively, e.g. through another package's peer dependency).
+packageExtensions:
+  next:
+    dependencies:
+      '@opentelemetry/api': 1.10.0
